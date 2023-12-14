@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/menufragment"
+    tools:context=".fragments.CuentaFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="15dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="TU PERFIL"
+                android:textColor="#8C8C8C"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imageCardCuenta"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:background="#8C8C8C"
+                android:src="@drawable/ic_person"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                app:shapeAppearanceOverlay="@style/roundedImage" />
+
+            <TextView
+                android:id="@+id/tvNombre"
+                android:layout_width="150dp"
+                android:layout_height="45dp"
+                android:padding="10dp"
+                android:textAlignment="textEnd"
+                android:textColor="#8C8C8C"
+                android:textSize="19sp"
+                android:text="Nombre: "
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageCardCuenta"
+                app:layout_constraintEnd_toStartOf="@+id/tvNombreEdit"
+                />
+
+            <EditText
+                android:id="@+id/tvNombreEdit"
+                android:layout_width="170dp"
+                android:layout_height="45dp"
+                android:enabled="false"
+                android:paddingEnd="5dp"
+                android:textAlignment="center"
+                android:text="Cristhian Esteban"
+                app:layout_constraintStart_toEndOf="@+id/tvNombre"
+                app:layout_constraintTop_toBottomOf="@+id/imageCardCuenta" />
+
+            <TextView
+                android:id="@+id/tvApellido"
+                android:layout_width="150dp"
+                android:layout_height="45dp"
+                android:padding="10dp"
+                android:textAlignment="textEnd"
+                android:text="Apellido: "
+                android:textColor="#8C8C8C"
+                android:textSize="19sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvNombre" />
+
+            <EditText
+                android:id="@+id/tvApellidoEdit"
+                android:layout_width="170dp"
+                android:layout_height="45dp"
+                android:enabled="false"
+                android:text="Gonzalez Ospina"
+                android:textAlignment="center"
+                app:layout_constraintStart_toEndOf="@+id/tvApellido"
+                app:layout_constraintTop_toBottomOf="@+id/tvNombreEdit" />
+
+            <TextView
+                android:id="@+id/tvCorreo"
+                android:layout_width="135dp"
+                android:layout_height="45dp"
+                android:padding="10dp"
+                android:text="Correo: "
+                android:textAlignment="textEnd"
+                android:textColor="#8C8C8C"
+                android:textSize="19sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvApellido" />
+
+            <EditText
+                android:id="@+id/tvCorreoEdit"
+                android:layout_width="230dp"
+                android:layout_height="45dp"
+                android:enabled="false"
+                android:inputType="textEmailAddress"
+                android:text="crisgonos1532@gmail.com"
+                app:layout_constraintStart_toEndOf="@+id/tvCorreo"
+                app:layout_constraintTop_toBottomOf="@+id/tvApellidoEdit" />
+
+            <TextView
+                android:id="@id/itvNumIdentificacion"
+                android:layout_width="150dp"
+                android:layout_height="45dp"
+                android:padding="10dp"
+                android:textAlignment="textEnd"
+                android:text="Identificacion: "
+                android:textColor="#8C8C8C"
+                android:textSize="19sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvCorreo" />
+
+            <EditText
+                android:id="@+id/itvNumIdentificacionEdit"
+                android:layout_width="170dp"
+                android:layout_height="45dp"
+                android:enabled="false"
+                android:text="1192746203"
+                android:inputType="phone"
+                android:textAlignment="center"
+                app:layout_constraintStart_toEndOf="@+id/itvNumIdentificacion"
+                app:layout_constraintTop_toBottomOf="@+id/tvCorreoEdit" />
+
+            <TextView
+                android:id="@+id/tvNumCelular"
+                android:layout_width="150dp"
+                android:layout_height="45dp"
+                android:padding="10dp"
+                android:text="N° Celular: "
+                android:textAlignment="textEnd"
+                android:textColor="#8C8C8C"
+                android:textSize="19sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/itvNumIdentificacion" />
+
+            <EditText
+                android:id="@+id/tvNumCelularEdit"
+                android:layout_width="170dp"
+                android:layout_height="45dp"
+                android:enabled="false"
+                android:text="3008887991"
+                android:inputType="phone"
+                android:textAlignment="center"
+                app:layout_constraintStart_toEndOf="@+id/tvNumCelular"
+                app:layout_constraintTop_toBottomOf="@+id/itvNumIdentificacionEdit" />
+
+            <Button
+                android:id="@+id/btnAceptar"
+                android:layout_width="110dp"
+                android:layout_height="60dp"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="@color/cian"
+                android:text="Aceptar"
+                android:enabled="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btnCancelar"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/btnCancelar"
+                android:layout_width="110dp"
+                android:layout_height="60dp"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="@color/cian"
+                android:text="Cancelar"
+                android:enabled="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btnAceptar" />
+
+            <ImageButton
+                android:id="@+id/editarInfo"
+                android:layout_width="40dp"
+                android:layout_height="45dp"
+                android:background="#00FFFFFF"
+                android:src="@drawable/editar_infro"
+                app:layout_constraintStart_toEndOf="@+id/textView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

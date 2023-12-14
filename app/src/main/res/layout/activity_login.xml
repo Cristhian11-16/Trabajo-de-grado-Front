@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo"
+    tools:context=".activitys.Login">
+
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="317dp"
+        android:layout_height="235dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/titulo"
+        android:text="Futy For All"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="80dp"
+        app:layout_constraintBottom_toTopOf="@+id/cvC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvC"
+        android:layout_width="328dp"
+        android:layout_height="434dp"
+        android:layout_margin="40dp"
+        app:cardBackgroundColor="#FEFEFE"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitulo">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btnSingin"
+                android:layout_width="133dp"
+                android:layout_height="58dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/gris"
+                android:text="Crear cuenta"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toStartOf="@id/btn2Login"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+
+                android:id="@+id/btn2Login"
+                android:layout_width="134dp"
+                android:layout_height="59dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="35dp"
+                android:backgroundTint="@color/cian"
+                android:enabled="false"
+                android:text="Iniciar sesion"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btnSingin"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvBienvenido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Bienvenido a Futy For All"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toTopOf="@+id/textInputLayoutCorreo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn2Login" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutCorreo"
+                android:layout_width="238dp"
+                android:layout_height="55dp"
+                app:endIconMode="clear_text"
+                app:layout_constraintBottom_toTopOf="@+id/textInputLayoutContraseña"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvBienvenido">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etCorreo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Correo electronico"
+                    android:inputType="textEmailAddress"
+                    android:textSize="13dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutContraseña"
+                android:layout_width="238dp"
+                android:layout_height="55dp"
+                app:endIconMode="password_toggle"
+                app:layout_constraintBottom_toTopOf="@+id/btnLogin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayoutCorreo">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etContraseña"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Contraseña"
+                    android:inputType="textPassword"
+                    android:minHeight="8sp"
+                    android:textSize="13dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="246dp"
+                android:layout_height="50dp"
+                android:layout_marginBottom="44dp"
+                android:backgroundTint="@color/cian"
+                android:fontFamily="sans-serif-black"
+                android:text="Iniciar sesion"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.493"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayoutContraseña" />
+
+            <TextView
+                android:id="@+id/tvCuenta"
+                android:layout_width="181dp"
+                android:layout_height="33dp"
+                android:layout_marginEnd="4dp"
+                android:text="¿Olvidaste tu contraseña?"
+                android:textAlignment="textEnd"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

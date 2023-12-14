@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PruebaConexion"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".activitys.MenuLateral"
+            android:exported="false"
+            android:label="@string/title_activity_menu_lateral"
+            android:theme="@style/Theme.PruebaConexion.NoActionBar" />
+        <activity
+            android:name=".activity.MenuLateral"
+            android:exported="false"
+            android:label="Futy For All"
+             />
+        <activity
+            android:name=".Cuenta"
+            android:exported="false" />
+        <activity
+            android:name=".Reserva"
+            android:exported="false" />
+        <activity
+            android:name=".CanchaPrincipal"
+            android:exported="false" />
+        <activity
+            android:name=".RegistrarDatos"
+            android:exported="false" />
+        <activity
+            android:name=".RegistrarCorreo"
+            android:exported="false" />
+        <activity
+            android:name=".activitys.Registrarse2"
+            android:exported="false" />
+        <activity
+            android:name=".Principal"
+            android:exported="false" />
+        <activity
+            android:name=".activitys.Registrarse"
+            android:exported="false" />
+        <activity
+            android:name=".Signin"
+            android:exported="false" />
+        <activity
+            android:name=".activitys.Login"
+            android:exported="false" />
+        <activity
+            android:name=".models.Login"
+            android:exported="true"
+            android:label="@string/title_activity_login"
+            android:theme="@style/Theme.PruebaConexion" />
+        <activity
+            android:name=".activitys.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activitys.MainActivityPrueba"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation2"
+    app:startDestination="@id/pantallaPrincipalFragment">
+
+    <fragment
+        android:id="@+id/cuentaFragment"
+        android:name="com.miprimeraapp.pruebaconexion.fragments.CuentaFragment"
+        android:label="Tu cuenta"
+        tools:layout="@layout/fragment_cuenta" />
+    <fragment
+        android:id="@+id/pantallaPrincipalFragment"
+        android:name="com.miprimeraapp.pruebaconexion.fragments.PantallaPrincipalFragment"
+        android:label="Futy For All"
+        tools:layout="@layout/fragment_pantalla_principal" >
+        <action
+            android:id="@+id/action_pantallaPrincipalFragment_to_reservaFragment"
+            app:destination="@id/reservaFragment"
+            />
+        <action
+            android:id="@+id/action_pantallaPrincipalFragment_to_cuentaFragment"
+            app:destination="@id/cuentaFragment" />
+        <action
+            android:id="@+id/action_pantallaPrincipalFragment_to_mainActivity2"
+            app:destination="@id/mainActivity2" />
+        <action
+            android:id="@+id/action_pantallaPrincipalFragment_to_canchaPrincipalFragment"
+            app:destination="@id/canchaPrincipalFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/reservaFragment"
+        android:name="com.miprimeraapp.pruebaconexion.fragments.ListReservaFragment"
+        android:label="Tus Reservas"
+        tools:layout="@layout/fragment_reserva" />
+    <activity
+        android:id="@+id/mainActivity2"
+        android:name="com.miprimeraapp.pruebaconexion.activitys.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+    <fragment
+        android:id="@+id/canchaPrincipalFragment"
+        android:name="com.miprimeraapp.pruebaconexion.fragments.canchaPrincipalFragment"
+        android:label="fragment_cancha_principal"
+        tools:layout="@layout/fragment_cancha_principal" />
+</navigation>

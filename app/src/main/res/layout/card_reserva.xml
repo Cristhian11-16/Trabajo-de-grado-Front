@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardReserva"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        >
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageCardReserva"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:src="@drawable/logo_5site"
+            app:shapeAppearanceOverlay="@style/roundedImage"
+            />
+
+        <TextView
+            android:id="@+id/tvNombreReserva"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="4dp"
+            android:layout_toEndOf="@+id/imageCardReserva"
+            android:layout_toRightOf="@+id/imageCardReserva"
+            android:text="Nombre de la cancha"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:id="@+id/tvFechaHora"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvNombreReserva"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="4dp"
+            android:layout_toEndOf="@+id/imageCardReserva"
+            android:layout_toRightOf="@+id/imageCardReserva"
+            android:text="Fecha y hora: 16/11/2001 - 12:00"
+            android:textColor="@android:color/black"
+            android:textSize="13sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/tvEstadoReserva"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvFechaHora"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="4dp"
+            android:layout_toEndOf="@+id/imageCardReserva"
+            android:layout_toRightOf="@+id/imageCardReserva"
+            android:text="Estado: Abierto"
+            android:textColor="@android:color/black"
+            android:textSize="13sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/tvEstadoPagoReserva"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvEstadoReserva"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="4dp"
+            android:layout_toEndOf="@+id/imageCardReserva"
+            android:layout_toRightOf="@+id/imageCardReserva"
+            android:text="Pago: Aprobado"
+            android:textColor="@android:color/black"
+            android:textSize="13sp"
+            android:textStyle="normal" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

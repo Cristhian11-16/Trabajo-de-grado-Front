@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_canchas"
+            android:icon="@drawable/ic_home"
+            android:title="Canchas"
+            android:checked="true"/>
+        <item
+            android:id="@+id/nav_cuenta"
+            android:icon="@drawable/ic_person"
+            android:title="Cuenta" />
+        <item
+            android:id="@+id/nav_reserva"
+            android:icon="@drawable/ic_reserva"
+            android:title="Reservas" />
+        <item
+            android:id="@+id/nav_cerrar"
+            android:icon="@drawable/ic_cerrar_sesion"
+            android:title="Cerrar sesion" />
+    </group>
+</menu>

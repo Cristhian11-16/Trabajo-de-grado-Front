@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/menufragment"
+    tools:context=".fragments.ListReservaFragment">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvBuscador"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="8dp"
+            app:cardUseCompatPadding="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="2dp">
+
+
+                <androidx.appcompat.widget.SearchView
+                    android:id="@+id/buscadorPagReserva"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:iconifiedByDefault="false"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:queryBackground="@android:color/transparent"
+                    app:queryHint="Buscar cancha">
+
+
+                </androidx.appcompat.widget.SearchView>
+
+                <ImageButton
+                    android:id="@+id/ic_calendar"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:background="#00FFFFFF"
+                    android:scaleType="center"
+                    android:src="@drawable/baseline_calendar_month_24"
+                    app:layout_constraintEnd_toStartOf="@+id/etFechaReserva"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/buscadorPagReserva" />
+                <EditText
+                    android:id="@+id/etFechaReserva"
+                    android:layout_width="130dp"
+                    android:layout_height="40dp"
+                    android:enabled="false"
+                    android:inputType="date"
+
+                    android:scrollbarSize="10dp"
+                    app:layout_constraintEnd_toStartOf="@+id/spinnerEstado"
+                    app:layout_constraintTop_toBottomOf="@+id/buscadorPagReserva" />
+
+
+                <Spinner
+                    android:id="@+id/spinnerEstado"
+                    android:layout_width="125dp"
+                    android:layout_height="40dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/ic_limpiar"
+                    app:layout_constraintTop_toBottomOf="@+id/buscadorPagReserva" />
+
+                <ImageButton
+                    android:id="@+id/ic_search"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:background="#00FFFFFF"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_search"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/buscadorPagReserva" />
+
+                <ImageButton
+                    android:id="@+id/ic_limpiar"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:background="#00FFFFFF"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_delete"
+                    app:layout_constraintEnd_toStartOf="@+id/ic_search"
+                    app:layout_constraintTop_toBottomOf="@+id/buscadorPagReserva" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewReserva"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvBuscador" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

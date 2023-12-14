@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pantallaPrincipalFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/bt_aceptar"
+    app:layout_constraintBottom_toBottomOf="parent"
+    android:background="@drawable/menufragment"
+    tools:context=".fragments.PantallaPrincipalFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvBuscador"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="8dp"
+            app:cardUseCompatPadding="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="2dp">
+
+
+                <androidx.appcompat.widget.SearchView
+                    android:id="@+id/buscadorPag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:iconifiedByDefault="false"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:queryBackground="@android:color/transparent"
+                    app:queryHint="Buscar cancha">
+
+
+                </androidx.appcompat.widget.SearchView>
+
+                <Spinner
+                    android:id="@+id/spinnerLocalidad"
+                    android:layout_width="125dp"
+                    android:layout_height="40dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/buscadorPag" />
+
+                <Spinner
+                    android:id="@+id/spinnerBarrio"
+                    android:layout_width="125dp"
+                    android:layout_height="40dp"
+                    android:scrollbarSize="10dp"
+                    app:layout_constraintStart_toEndOf="@+id/spinnerLocalidad"
+                    app:layout_constraintTop_toBottomOf="@+id/buscadorPag" />
+
+                <Spinner
+                    android:id="@+id/spinnerDia"
+                    android:layout_width="130dp"
+                    android:layout_height="40dp"
+                    android:scrollbarSize="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/spinnerLocalidad" />
+
+
+                <Spinner
+                    android:id="@+id/spinnerHora"
+                    android:layout_width="110dp"
+                    android:layout_height="40dp"
+                    android:scrollbarSize="10dp"
+                    app:layout_constraintStart_toEndOf="@+id/spinnerDia"
+                    app:layout_constraintTop_toBottomOf="@+id/spinnerBarrio" />
+
+                <ImageButton
+                    android:id="@+id/ic_search"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:background="#00FFFFFF"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_search"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/buscadorPag" />
+
+                <ImageButton
+                    android:id="@+id/ic_limpiar"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:background="#00FFFFFF"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_delete"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ic_search" />
+
+                <CheckBox
+                    android:id="@+id/checkBoxFut8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="Futbol 8 "
+                    android:textColor="#ABAAAC"
+                    app:layout_constraintEnd_toStartOf="@+id/ic_search"
+                    app:layout_constraintStart_toEndOf="@+id/spinnerBarrio"
+                    app:layout_constraintTop_toBottomOf="@+id/buscadorPag" />
+
+                <CheckBox
+                    android:id="@+id/checkBoxPark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="Parquadero  "
+                    android:textColor="#ABAAAC"
+                    app:layout_constraintEnd_toStartOf="@+id/ic_limpiar"
+                    app:layout_constraintStart_toEndOf="@+id/spinnerHora"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBoxFut8" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewCancha"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvBuscador" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>
